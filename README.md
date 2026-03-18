@@ -14,7 +14,7 @@
       --bg-body: #0b0f15;
       --sidebar-bg: #0a1e3c;
       --sidebar-hover: #123456;
-      --main-bg: #1a1e24;        /* baru: gelap */
+      --main-bg: #1a1e24;
       --main-text: #f0f4fa;
       --card-bg: #2a2f38;
       --text-light: #f0f4fa;
@@ -35,11 +35,13 @@
     .navbar {
       background-color: #0a1424 !important;
       border-bottom: 1px solid #1f2b3c;
+      padding: 0.75rem 1rem;
     }
     .navbar-brand {
       font-weight: 700;
       color: #ffffff !important;
       font-size: 1.5rem;
+      white-space: nowrap;
     }
     .navbar .btn-outline-warning {
       color: #ffb347;
@@ -291,26 +293,44 @@
       color: #b0c4de;
       margin-bottom: 1.5rem;
     }
+
+    /* Penyesuaian untuk mobile: form pencarian selalu tampil */
+    .navbar .search-form {
+      flex: 1 1 100%;
+      margin: 0.5rem 0;
+    }
+    @media (min-width: 992px) {
+      .navbar .search-form {
+        flex: 1 1 auto;
+        max-width: 50%;
+        margin: 0 1rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Navbar (gelap) -->
-  <nav class="navbar navbar-expand-lg shadow-sm px-4 py-3">
-    <div class="container-fluid">
+  <!-- Navbar (gelap) dengan form pencarian selalu tampil -->
+  <nav class="navbar navbar-expand-lg shadow-sm">
+    <div class="container-fluid flex-wrap flex-lg-nowrap">
       <a class="navbar-brand" href="#" onclick="showDashboard(); return false;"><i class="fas fa-gavel me-2 text-primary"></i>PRODI HUKUM</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      
+      <!-- Form pencarian - selalu tampil, di luar tombol toggle -->
+      <form class="search-form d-flex order-3 order-lg-2" id="searchForm" onsubmit="event.preventDefault(); searchPasal();">
+        <div class="input-group">
+          <span class="input-group-text bg-transparent"><i class="fas fa-search text-primary"></i></span>
+          <input type="text" class="form-control border-start-0" id="searchInput" placeholder="Cari pasal / tanyakan..." value="">
+          <button class="btn btn-primary" type="submit"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </form>
+
+      <!-- Tombol toggle untuk menu bookmark, catatan, update -->
+      <button class="navbar-toggler order-2 order-lg-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <form class="d-flex mx-auto w-50" id="searchForm" onsubmit="event.preventDefault(); searchPasal();">
-          <div class="input-group">
-            <span class="input-group-text bg-transparent"><i class="fas fa-search text-primary"></i></span>
-            <input type="text" class="form-control border-start-0" id="searchInput" placeholder="Cari pasal / tanyakan (contoh: pasal pencurian baru)" value="">
-            <button class="btn btn-primary" type="submit"><i class="fas fa-arrow-right"></i></button>
-          </div>
-        </form>
-        <div class="d-flex gap-2">
+
+      <div class="collapse navbar-collapse order-4 order-lg-4" id="navbarNav">
+        <div class="d-flex gap-2 ms-auto">
           <button class="btn btn-outline-warning" onclick="showBookmarksView()"><i class="fas fa-bookmark me-1"></i>Bookmark</button>
           <button class="btn btn-outline-info" onclick="showNotesView()"><i class="fas fa-pen me-1"></i>Catatan</button>
           <button class="btn btn-outline-success" onclick="simulateUpdate()"><i class="fas fa-sync-alt me-1"></i>Update</button>
@@ -446,6 +466,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   
   <script>
+    // (JavaScript tetap sama seperti kode Anda sebelumnya, saya hanya akan menyertakan versi lengkapnya agar tidak ada bagian yang terpotong)
     // ----- DATA PASAL (INTEGRASI SUMBER HUKUM) -----
     let lawsData = [
       // KUHP Perdata - data asli (sumber: KUHPerdata)
