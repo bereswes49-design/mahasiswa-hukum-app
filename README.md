@@ -1,4 +1,4 @@
-#<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -9,20 +9,20 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* ===== TEMA GELAP PREMIUM ===== */
+    /* ===== TEMA MERAH PREMIUM ===== */
     :root {
       --bg-body: #0b0f15;
-      --sidebar-bg: #0a1e3c;
-      --sidebar-hover: #123456;
+      --sidebar-bg: #8B0000;        /* merah marun */
+      --sidebar-hover: #A52A2A;      /* merah kecoklatan */
       --main-bg: #1a1e24;
       --main-text: #f0f4fa;
       --card-bg: #2a2f38;
       --text-light: #f0f4fa;
       --text-muted: #a0b3cc;
-      --primary-accent: #3b7cff;
+      --primary-accent: #B22222;     /* merah firebrick */
       --warning-accent: #ffb347;
       --info-accent: #5fa7e7;
-      --border-dark: #2a3a55;
+      --border-dark: #5a2a2a;        /* merah gelap */
     }
 
     body {
@@ -67,8 +67,17 @@
       background-color: #6fcf97;
       color: #0a1424;
     }
+    /* Tombol login/registrasi */
+    .navbar .btn-outline-light {
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+    .navbar .btn-outline-light:hover {
+      background-color: #ffffff;
+      color: #0a1424;
+    }
 
-    /* Sidebar kiri (biru elegan) */
+    /* Sidebar kiri (merah) */
     .sidebar {
       background: var(--sidebar-bg);
       border-radius: 1rem 0 0 1rem;
@@ -92,7 +101,7 @@
       margin-bottom: 0.5rem;
     }
     .accordion-button {
-      background-color: #123456;
+      background-color: #A52A2A;      /* merah hover */
       color: white;
       border: none;
       box-shadow: none;
@@ -101,7 +110,7 @@
       font-weight: 500;
     }
     .accordion-button:not(.collapsed) {
-      background-color: #1e4a7a;
+      background-color: #B22222;      /* merah lebih terang */
       color: white;
     }
     .accordion-button:focus {
@@ -116,22 +125,22 @@
     }
     .list-group-flush .list-group-item {
       background-color: transparent;
-      color: #d0e0ff;
+      color: #ffe0e0;
       border: none;
       padding: 0.5rem 1rem;
       border-radius: 0.3rem;
       margin-bottom: 0.1rem;
     }
     .list-group-flush .list-group-item:hover {
-      background-color: #1f3a5e;
+      background-color: #A52A2A;
       color: white;
     }
     .list-group-flush .list-group-item.active {
-      background-color: #2f4b73;
+      background-color: #B22222;
       color: white;
     }
 
-    /* Main panel (gelap, agar menyatu) */
+    /* Main panel (gelap) */
     .main-panel {
       background: var(--main-bg);
       border-radius: 0 1rem 1rem 0;
@@ -150,7 +159,7 @@
 
     /* badge kategori */
     .badge-kuhp {
-      background-color: #2f4b73;
+      background-color: #B22222;
       color: white;
       font-weight: 500;
     }
@@ -158,15 +167,15 @@
     /* hasil pencarian, bookmark, catatan di panel utama */
     .list-group-item {
       background-color: var(--card-bg);
-      border: 1px solid #3a4a62;
+      border: 1px solid #5a2a2a;
       color: var(--main-text);
     }
     .list-group-item-action:hover {
-      background-color: #2f3f5a;
+      background-color: #6a2a2a;
       color: white;
     }
     .list-group-item .badge-kuhp {
-      background-color: #1e4a7a;
+      background-color: #B22222;
       color: white;
     }
 
@@ -174,10 +183,10 @@
     .modal-content {
       background-color: #1e2b3c;
       color: #eef4ff;
-      border: 1px solid #2f4b73;
+      border: 1px solid #5a2a2a;
     }
     .modal-header, .modal-footer {
-      border-color: #2f4b73;
+      border-color: #5a2a2a;
     }
     .modal-title {
       color: white;
@@ -195,25 +204,25 @@
     /* form kontrol */
     .form-control, .input-group-text {
       background-color: #1e2b3c;
-      border-color: #2f4b73;
+      border-color: #5a2a2a;
       color: white;
     }
     .form-control:focus {
       background-color: #243447;
       color: white;
-      border-color: #3b7cff;
-      box-shadow: 0 0 0 0.2rem rgba(59, 124, 255, 0.25);
+      border-color: #B22222;
+      box-shadow: 0 0 0 0.2rem rgba(178, 34, 34, 0.25);
     }
     .input-group-text {
       color: #a0b3cc;
     }
     .btn-primary {
-      background-color: #3b7cff;
-      border-color: #3b7cff;
+      background-color: #B22222;
+      border-color: #B22222;
     }
     .btn-primary:hover {
-      background-color: #2563eb;
-      border-color: #2563eb;
+      background-color: #8B0000;
+      border-color: #8B0000;
     }
 
     /* scrollbar premium untuk sidebar */
@@ -221,14 +230,14 @@
       width: 6px;
     }
     .sidebar::-webkit-scrollbar-track {
-      background: #0a1e3c;
+      background: #8B0000;
     }
     .sidebar::-webkit-scrollbar-thumb {
-      background: #2f4b73;
+      background: #B22222;
       border-radius: 10px;
     }
     .sidebar::-webkit-scrollbar-thumb:hover {
-      background: #3b7cff;
+      background: #ff4d4d;
     }
 
     /* bookmark icon */
@@ -245,20 +254,20 @@
     }
 
     /* untuk tampilan mata kuliah & skripsi */
-    .mk-card, .skripsi-card {
-      border-left: 4px solid #3b7cff;
+    .mk-card, .skripsi-card, .pasal-card {
+      border-left: 4px solid #B22222;
       margin-bottom: 1rem;
     }
-    .mk-actions, .skripsi-actions {
+    .mk-actions, .skripsi-actions, .pasal-actions {
       display: flex;
       gap: 0.5rem;
     }
-    .mk-content, .skripsi-content {
+    .mk-content, .skripsi-content, .pasal-content {
       line-height: 1.7;
       text-align: justify;
       margin-top: 0.5rem;
     }
-    .mk-content p, .skripsi-content p {
+    .mk-content p, .skripsi-content p, .pasal-content p {
       margin-bottom: 0.8rem;
     }
     .skripsi-meta {
@@ -279,7 +288,7 @@
     }
     .dashboard-icon {
       font-size: 4rem;
-      color: #3b7cff;
+      color: #B22222;
       margin-bottom: 1rem;
     }
     .dashboard-title {
@@ -306,11 +315,45 @@
         margin: 0 1rem;
       }
     }
+
+    /* Style untuk tampilan skripsi seperti dokumen formal */
+    .skripsi-dokumen {
+      background: white;
+      color: black;
+      padding: 2cm 1.5cm;
+      margin: 0;
+      font-family: 'Times New Roman', serif;
+      font-size: 12pt;
+      line-height: 1.5;
+      text-align: justify;
+      max-width: 210mm; /* A4 width */
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .skripsi-dokumen .judul {
+      font-size: 14pt;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1cm;
+    }
+    .skripsi-dokumen .penulis {
+      text-align: center;
+      margin-bottom: 1cm;
+    }
+    .skripsi-dokumen .abstrak {
+      margin-top: 1cm;
+      margin-bottom: 1cm;
+    }
+    .skripsi-dokumen .abstrak h6 {
+      font-weight: bold;
+    }
+    .skripsi-dokumen .konten {
+      margin-top: 1cm;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Navbar (gelap) dengan form pencarian selalu tampil -->
+  <!-- Navbar (gelap) dengan form pencarian selalu tampil dan tombol login/registrasi -->
   <nav class="navbar navbar-expand-lg shadow-sm">
     <div class="container-fluid flex-wrap flex-lg-nowrap">
       <a class="navbar-brand" href="#" onclick="showDashboard(); return false;"><i class="fas fa-gavel me-2 text-primary"></i>PRODI HUKUM</a>
@@ -324,7 +367,7 @@
         </div>
       </form>
 
-      <!-- Tombol toggle untuk menu bookmark, catatan, update -->
+      <!-- Tombol toggle untuk menu bookmark, catatan, update, login -->
       <button class="navbar-toggler order-2 order-lg-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -334,6 +377,9 @@
           <button class="btn btn-outline-warning" onclick="showBookmarksView()"><i class="fas fa-bookmark me-1"></i>Bookmark</button>
           <button class="btn btn-outline-info" onclick="showNotesView()"><i class="fas fa-pen me-1"></i>Catatan</button>
           <button class="btn btn-outline-success" onclick="simulateUpdate()"><i class="fas fa-sync-alt me-1"></i>Update</button>
+          <!-- Tombol Login & Registrasi -->
+          <button class="btn btn-outline-light" onclick="alert('Fitur login dalam pengembangan')">Login</button>
+          <button class="btn btn-outline-light" onclick="alert('Fitur registrasi dalam pengembangan')">Registrasi</button>
         </div>
       </div>
     </div>
@@ -342,7 +388,7 @@
   <!-- Main Content -->
   <div class="container-fluid px-4 py-3">
     <div class="row g-3">
-      <!-- SIDEBAR KIRI: Folder Kategori -->
+      <!-- SIDEBAR KIRI: Folder Kategori (merah) -->
       <div class="col-lg-3">
         <div class="sidebar">
           <h5 class="fw-bold"><i class="fas fa-folder me-2 text-primary"></i>Kategori</h5>
@@ -357,9 +403,10 @@
               <div id="collapseAll" class="accordion-collapse collapse show" aria-labelledby="headingAll" data-bs-parent="#sidebarAccordion">
                 <div class="accordion-body p-0">
                   <div class="list-group list-group-flush">
-                    <a href="#" class="list-group-item list-group-item-action" data-category="KUHP Perdata" onclick="selectCategory('KUHP Perdata')">KUHP Perdata</a>
-                    <a href="#" class="list-group-item list-group-item-action" data-category="KUHP Pidana Lama" onclick="selectCategory('KUHP Pidana Lama')">KUHP Pidana Lama</a>
-                    <a href="#" class="list-group-item list-group-item-action" data-category="KUHP Pidana Baru" onclick="selectCategory('KUHP Pidana Baru')">KUHP Pidana Baru</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-category="KUH PERDATA" onclick="selectCategory('KUH PERDATA')">KUH PERDATA</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-category="KUHP LAMA" onclick="selectCategory('KUHP LAMA')">KUHP LAMA</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-category="KUHP BARU" onclick="selectCategory('KUHP BARU')">KUHP BARU</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-category="KUHAP BARU" onclick="selectCategory('KUHAP BARU')">KUHAP BARU</a>
                   </div>
                 </div>
               </div>
@@ -396,8 +443,7 @@
               <div id="collapseSkripsi" class="accordion-collapse collapse" aria-labelledby="headingSkripsi" data-bs-parent="#sidebarAccordion">
                 <div class="accordion-body p-0">
                   <div class="list-group list-group-flush">
-                    <a href="#" class="list-group-item list-group-item-action" onclick="showSkripsi('2023')">Skripsi 2023</a>
-                    <a href="#" class="list-group-item list-group-item-action" onclick="showSkripsi('2024')">Skripsi 2024</a>
+                    <a href="#" class="list-group-item list-group-item-action" onclick="showSkripsiList()">Daftar Skripsi</a>
                   </div>
                 </div>
               </div>
@@ -422,7 +468,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="pasalModalLabel">Detail Pasal</h5>
+          <h5 class="modal-title" id="pasalModalLabel">Detail</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" id="pasalModalBody"></div>
@@ -462,90 +508,102 @@
     </div>
   </div>
 
+  <!-- Modal untuk Tambah/Edit Pasal -->
+  <div class="modal fade" id="pasalModalEdit" tabindex="-1" aria-labelledby="pasalModalEditLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pasalModalEditLabel">Tambah/Ubah Pasal</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="pasalForm">
+            <input type="hidden" id="pasalEditId" value="">
+            <input type="hidden" id="pasalCategory" value="">
+            <div class="mb-3">
+              <label for="pasalNumber" class="form-label">Nomor Pasal</label>
+              <input type="text" class="form-control" id="pasalNumber" required>
+            </div>
+            <div class="mb-3">
+              <label for="pasalTitle" class="form-label">Judul Pasal</label>
+              <input type="text" class="form-control" id="pasalTitle" required>
+            </div>
+            <div class="mb-3">
+              <label for="pasalContent" class="form-label">Konten (gunakan baris baru untuk paragraf)</label>
+              <textarea class="form-control" id="pasalContent" rows="8" required></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-primary" onclick="savePasalItem()">Simpan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal untuk Tambah/Edit Skripsi -->
+  <div class="modal fade" id="skripsiModal" tabindex="-1" aria-labelledby="skripsiModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="skripsiModalLabel">Tulis Skripsi</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="skripsiForm">
+            <input type="hidden" id="skripsiEditId" value="">
+            <div class="mb-3">
+              <label for="skripsiJudul" class="form-label">Judul Skripsi</label>
+              <input type="text" class="form-control" id="skripsiJudul" required>
+            </div>
+            <div class="mb-3">
+              <label for="skripsiPenulis" class="form-label">Penulis</label>
+              <input type="text" class="form-control" id="skripsiPenulis" required>
+            </div>
+            <div class="mb-3">
+              <label for="skripsiAbstrak" class="form-label">Abstrak</label>
+              <textarea class="form-control" id="skripsiAbstrak" rows="4" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="skripsiIsi" class="form-label">Isi Skripsi (gunakan baris baru untuk paragraf)</label>
+              <textarea class="form-control" id="skripsiIsi" rows="12" required></textarea>
+            </div>
+            <div class="text-muted small">* Format tampilan akan menyesuaikan aturan skripsi: margin A4, Times New Roman 12pt, spasi 1.5, dll.</div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-primary" onclick="saveSkripsiItem()">Simpan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap JS & Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   
   <script>
-    // (JavaScript tetap sama seperti kode Anda sebelumnya, saya hanya akan menyertakan versi lengkapnya agar tidak ada bagian yang terpotong)
-    // ----- DATA PASAL (INTEGRASI SUMBER HUKUM) -----
-    let lawsData = [
-      // KUHP Perdata - data asli (sumber: KUHPerdata)
-      { id: 'perdata-1234', category: 'KUHP Perdata', number: '1234', title: 'Perikatan pada Umumnya', content: 'Pasal 1234 KUHPerdata: Tiap-tiap perikatan adalah untuk memberikan sesuatu, untuk berbuat sesuatu, atau untuk tidak berbuat sesuatu.' },
-      { id: 'perdata-1243', category: 'KUHP Perdata', number: '1243', title: 'Penggantian Biaya, Rugi dan Bunga', content: 'Pasal 1243 KUHPerdata: Penggantian biaya, rugi dan bunga karena tak dipenuhinya suatu perikatan, barulah mulai diwajibkan, apabila si berutang, setelah dinyatakan lalai memenuhi perikatannya, tetap melalaikannya, atau jika sesuatu yang harus diberikan atau dilakukannya hanya dapat diberikan atau dilakukannya dalam waktu yang melampaui waktu yang telah ditentukan.' },
-      { id: 'perdata-1365', category: 'KUHP Perdata', number: '1365', title: 'Perbuatan Melawan Hukum', content: 'Pasal 1365 KUHPerdata: Tiap perbuatan melawan hukum yang membawa kerugian kepada orang lain, mewajibkan orang yang karena salahnya menerbitkan kerugian itu, mengganti kerugian tersebut.' },
-      { id: 'perdata-1366', category: 'KUHP Perdata', number: '1366', title: 'Tanggung Jawab atas Kelalaian', content: 'Pasal 1366 KUHPerdata: Setiap orang bertanggung jawab tidak saja untuk kerugian yang disebabkan karena perbuatannya, tetapi juga untuk kerugian yang disebabkan karena kelalaiannya atau kurang hati-hatinya.' },
-      { id: 'perdata-1367', category: 'KUHP Perdata', number: '1367', title: 'Tanggung Jawab atas Perbuatan Orang Lain', content: 'Pasal 1367 KUHPerdata: Seseorang tidak hanya bertanggung jawab untuk kerugian yang disebabkan karena perbuatannya sendiri, melainkan juga untuk kerugian yang disebabkan karena perbuatan orang-orang yang menjadi tanggungannya atau disebabkan oleh barang-barang yang berada di bawah pengawasannya.' },
-      { id: 'perdata-1320', category: 'KUHP Perdata', number: '1320', title: 'Syarat Sah Perjanjian', content: 'Pasal 1320 KUHPerdata: Untuk sahnya suatu perjanjian diperlukan empat syarat: 1. sepakat mereka yang mengikatkan dirinya; 2. kecakapan untuk membuat suatu perikatan; 3. suatu hal tertentu; 4. suatu sebab yang halal.' },
-      { id: 'perdata-1338', category: 'KUHP Perdata', number: '1338', title: 'Kebebasan Berkontrak', content: 'Pasal 1338 KUHPerdata: Semua perjanjian yang dibuat secara sah berlaku sebagai undang-undang bagi mereka yang membuatnya. Suatu perjanjian tidak dapat ditarik kembali selain dengan sepakat kedua belah pihak, atau karena alasan-alasan yang oleh undang-undang dinyatakan cukup untuk itu. Suatu perjanjian harus dilaksanakan dengan itikad baik.' },
-      
-      // KUHP Pidana Lama (data sebelumnya)
-      { id: 'pidana-lama-362', category: 'KUHP Pidana Lama', number: '362', title: 'Pencurian', content: 'Pasal 362 KUHP (lama): Barang siapa mengambil barang sesuatu, yang seluruhnya atau sebagian kepunyaan orang lain, dengan maksud untuk dimiliki secara melawan hukum, diancam karena pencurian, dengan pidana penjara paling lama lima tahun atau pidana denda paling banyak sembilan ratus rupiah.' },
-      { id: 'pidana-lama-338', category: 'KUHP Pidana Lama', number: '338', title: 'Pembunuhan', content: 'Pasal 338 KUHP (lama): Barang siapa sengaja merampas nyawa orang lain, diancam karena pembunuhan dengan pidana penjara paling lama lima belas tahun.' },
-      
-      // KUHP Pidana Baru (data sebelumnya)
-      { id: 'pidana-baru-476', category: 'KUHP Pidana Baru', number: '476', title: 'Pencurian', content: 'Pasal 476 UU 1/2023 (baru): Setiap orang yang mengambil suatu barang yang sebagian atau seluruhnya milik orang lain dengan maksud untuk dimiliki secara melawan hukum, dipidana karena pencurian dengan pidana penjara paling lama 5 tahun atau pidana denda paling banyak kategori V.' },
-      { id: 'pidana-baru-459', category: 'KUHP Pidana Baru', number: '459', title: 'Pembunuhan', content: 'Pasal 459 UU 1/2023 (baru): Setiap orang yang merampas nyawa orang lain dengan sengaja, dipidana karena pembunuhan dengan pidana penjara paling lama 15 tahun.' }
-    ];
-
     // ----- STATE APLIKASI -----
-    let currentView = 'dashboard';        // default dashboard
+    let currentView = 'dashboard';        // 'dashboard', 'bookmarks', 'notes', 'category', 'mk', 'skripsiList'
+    let currentCategory = null;            // kategori pasal yang sedang dibuka
     let currentMK = null;                 // mata kuliah yang sedang dibuka
-    let currentSkripsiYear = null;        // tahun skripsi yang sedang dibuka
-    let bookmarks = JSON.parse(localStorage.getItem('lawBookmarks')) || [];      // array of id
-    let notes = JSON.parse(localStorage.getItem('lawNotes')) || {};              // object id -> text
+    let bookmarks = JSON.parse(localStorage.getItem('lawBookmarks')) || [];      // array of id (untuk pasal)
+    let notes = JSON.parse(localStorage.getItem('lawNotes')) || {};              // object id -> text (untuk pasal)
 
-    // Data mata kuliah disimpan di localStorage dengan kunci 'mkData'
+    // Data pasal manual (per kategori) - menggantikan lawsData statis
+    let pasalData = JSON.parse(localStorage.getItem('pasalData')) || {
+      'KUH PERDATA': [],
+      'KUHP LAMA': [],
+      'KUHP BARU': [],
+      'KUHAP BARU': []
+    };
+
+    // Data mata kuliah
     let mkData = JSON.parse(localStorage.getItem('mkData')) || {};
 
-    // Data skripsi - diambil dari repository universitas (contoh data lengkap)
-    const skripsiData = {
-      '2023': [
-        { 
-          id: 'skripsi-2023-001', 
-          title: 'PERLINDUNGAN HUKUM TERHADAP KORBAN ARISAN ONLINE TIDAK BERIZIN DI WILAYAH POLRES SUKABUMI KOTA',
-          author: 'Aufa Dary Naufal Rusmana, Asti Sri Mulyanti, Temmy Fitriah Alfiany',
-          abstract: 'Penelitian ini menjelaskan bagaimana perlindungan hukum terhadap korban yang mengalami kerugian akibat arisan berbasis online ditinjau dari pasal 1243 KUHPerdata dan bagaimana penegakan hukum terhadap pemilik arisan online tidak berizin. Pada April 2023, kasus arisan sultan di Sukabumi bermula ketika pemilik menyebarkan informasi arisan dan investasi melalui media sosial Instagram. Pemilik arisan menjanjikan keuntungan berkisar 5 hingga 10 persen. Namun setelah jatuh tempo yang disepakati, baik modal maupun keuntungan tidak pernah dikembalikan. Bentuk perlindungan hukum bagi peserta arisan online adalah dengan membayar ganti rugi sebagaimana diatur dalam Pasal 1243 KUHPerdata. Bentuk penegakan hukum terhadap pemilik arisan online dapat dijerat dengan Pasal 372 jo Pasal 378 KUHP dan/atau Undang-Undang Nomor 8 Tahun 2010.' 
-        },
-        {
-          id: 'skripsi-2023-002',
-          title: 'Analisis Yuridis Tindak Pidana Pembunuhan Berencana yang Disertai Mutilasi',
-          author: 'Acyntia Agata',
-          abstract: 'Penelitian ini menganalisis pertimbangan hakim dalam menjatuhkan pidana terhadap pelaku tindak pidana pembunuhan berencana yang disertai mutilasi. Studi kasus Putusan Pengadilan Negeri Sleman Nomor 349/Pid.B/2023/PN Smn dan Putusan Pengadilan Negeri Serui Nomor 50/Pid.B/2019/PN Sru. Hasil penelitian menunjukkan bahwa pertimbangan hakim didasarkan pada terpenuhinya unsur-unsur Pasal 340 KUHP tentang pembunuhan berencana serta pemberatan pidana karena tindakan mutilasi yang menimbulkan keresahan masyarakat.'
-        },
-        {
-          id: 'skripsi-2023-003',
-          title: 'Kepastian Hukum Terhadap Pelanggaran Hak Cipta di Bidang Sinematografi Berdasarkan Undang-Undang Hak Cipta dan UU ITE',
-          author: 'Louis Martin Lumban Raja',
-          abstract: 'Pelanggaran hak cipta di bidang sinematografi marak terjadi di tengah kemajuan teknologi. Penelitian ini mengkaji kepastian hukum bagi pemegang hak cipta sinematografi serta upaya penegakan hukum terhadap pelanggaran yang dilakukan melalui platform digital. Undang-Undang Hak Cipta dan Undang-Undang ITE memberikan perlindungan, namun implementasinya masih menghadapi kendala dalam hal pembuktian dan penindakan pelanggaran lintas yurisdiksi.'
-        }
-      ],
-      '2024': [
-        {
-          id: 'skripsi-2024-001',
-          title: 'ANALISIS PUTUSAN PENGADILAN NEGERI KOTA SUKABUMI NOMOR 3/PID.SUS-ANAK/2023/PN SKB DALAM PERKARA KEKERASAN SEKSUAL TERHADAP ANAK',
-          author: 'Muhammad Saddam Firdaus, Ujuh Juhana',
-          abstract: 'Penelitian ini bertujuan untuk mengkaji dan menganalisis bagaimana penerapan hukum dan efektivitas pemidanaan dalam putusan Pengadilan Negeri Kota Sukabumi Nomor 3/Pid.Sus-Anak/2023/PN.Skb. Kekerasan seksual terhadap anak merupakan tindakan pelecehan atau pemaksaan seksual yang dilakukan terhadap anak di bawah umur. Anak yang berhadapan dengan hukum terbukti bersalah melakukan kekerasan dengan memaksa anak melakukan hubungan seksual berulang kali, melanggar Pasal 81 ayat (1) Jo. Pasal 76D Undang-Undang Perlindungan Anak. Anak dijatuhi pidana penjara di LPKA dan pelatihan kerja.'
-        },
-        {
-          id: 'skripsi-2024-002',
-          title: 'Tinjauan Yuridis Terhadap Gugatan Perbuatan Melawan Hukum Dalam Peralihan Kepemilikan Hak Atas Tanah',
-          author: 'Diaz Diani',
-          abstract: 'Penelitian ini menganalisis pertimbangan hukum Hakim dalam mengkualifisir kriteria perbuatan melawan hukum dalam peralihan kepemilikan hak atas tanah serta pertimbangannya dalam mengabulkan gugatan ganti kerugian pada Putusan Pengadilan Negeri Kudus Nomor 17/Pdt.G/2023/PN Kds. Majelis Hakim menyatakan bahwa tindakan Para Tergugat adalah perbuatan melawan hukum yang melanggar hak orang lain berupa hak subyektif atas harta kekayaan. Tergugat II juga melanggar kewajiban hukumnya sebagai Notaris PPAT sebagaimana diatur dalam Pasal 16 ayat (1), (7) serta Pasal 44 Undang-Undang Nomor 2 Tahun 2014 tentang Jabatan Notaris.'
-        },
-        {
-          id: 'skripsi-2024-003',
-          title: 'ANALISIS MENGENAI DAMPAK LINGKUNGAN BERDASARKAN UNDANG-UNDANG NOMOR 6 TAHUN 2023',
-          author: 'Aqilah Gina Handira',
-          abstract: 'Penulisan skripsi ini adalah untuk mengetahui pelaksanaan kajian analisis mengenai dampak lingkungan (AMDAL) terhadap Undang-Undang Nomor 6 Tahun 2023, dimana terdapat perubahan kebijakan atas peraturan yang telah dihapuskan, diperbaharui maupun ditambahkan. Dokumen AMDAL merupakan prasyarat penting dalam perizinan berusaha yang semestinya tetap diprioritaskan untuk mendukung pembangunan berkelanjutan. Komisi Penilai AMDAL (KPA) sangat penting dalam memastikan efektivitas dan efisiensi proses penilaian AMDAL.'
-        },
-        {
-          id: 'skripsi-2024-004',
-          title: 'Digital Forensic dalam Pembuktian Tindak Pidana Ujaran Kebencian dalam Undang-Undang Informasi dan Transaksi Elektronik',
-          author: 'Rizky Mahendra',
-          abstract: 'Ujaran kebencian di media sosial yang menimbulkan konflik dan perpecahan di masyarakat seringkali tidak dilakukan oleh pemilik akun media sosial yang sebenarnya. Penelitian ini mengkaji peran digital forensic dalam pembuktian tindak pidana ujaran kebencian serta kekuatan pembuktiannya di persidangan berdasarkan Undang-Undang ITE. Studi Putusan Nomor 103/PID.SUS/2020/PN BLG dan Nomor 1379/PID.Sus/2020/PT.MDN menunjukkan bahwa digital forensic menjadi kunci dalam mengungkap pelaku sesungguhnya.'
-        }
-      ]
-    };
+    // Data skripsi - baru
+    let skripsiData = JSON.parse(localStorage.getItem('skripsiData')) || [];
 
     // Simpan perubahan ke localStorage
     function saveBookmarks() {
@@ -554,31 +612,22 @@
     function saveNotes() {
       localStorage.setItem('lawNotes', JSON.stringify(notes));
     }
+    function savePasalData() {
+      localStorage.setItem('pasalData', JSON.stringify(pasalData));
+    }
     function saveMKData() {
       localStorage.setItem('mkData', JSON.stringify(mkData));
+    }
+    function saveSkripsiData() {
+      localStorage.setItem('skripsiData', JSON.stringify(skripsiData));
     }
 
     // ----- FUNGSI UPDATE OTOMATIS (SIMULASI) -----
     function simulateUpdate() {
-      const newPasal = {
-        id: 'pidana-baru-480', 
-        category: 'KUHP Pidana Baru', 
-        number: '480', 
-        title: 'Pengeroyokan', 
-        content: 'Pasal 480 UU 1/2023: Setiap orang yang turut serta dalam kekerasan terhadap orang atau barang di muka umum diancam pidana penjara paling lama 7 tahun.'
-      };
-      if (!lawsData.find(p => p.id === newPasal.id)) {
-        lawsData.push(newPasal);
-      } else {
-        lawsData = lawsData.map(p => p.id === newPasal.id ? {...p, content: newPasal.content + ' [versi terbaru]'} : p);
-      }
-      alert('Update otomatis dari sumber hukum berhasil! (simulasi: pasal baru ditambahkan/diperbarui)');
-      if (currentView === 'category' && window.currentCategory) {
-        showCategoryPasal(window.currentCategory);
-      }
+      alert('Update otomatis: data terintegrasi dengan sumber hukum (simulasi).');
     }
 
-    // ----- BOOKMARK TOGGLE -----
+    // ----- BOOKMARK TOGGLE (untuk pasal) -----
     function toggleBookmark(id) {
       if (bookmarks.includes(id)) {
         bookmarks = bookmarks.filter(b => b !== id);
@@ -593,7 +642,7 @@
       return bookmarks.includes(id);
     }
 
-    // ----- CATATAN -----
+    // ----- CATATAN (untuk pasal) -----
     function editNote(id) {
       const existing = notes[id] || '';
       const newNote = prompt('Tulis catatan untuk pasal ini:', existing);
@@ -610,15 +659,24 @@
 
     // ----- MENAMPILKAN DETAIL PASAL DI MODAL -----
     function showPasalDetail(id) {
-      const law = lawsData.find(l => l.id === id);
+      // Cari pasal di semua kategori
+      let law = null;
+      for (const cat in pasalData) {
+        const found = pasalData[cat].find(p => p.id === id);
+        if (found) {
+          law = found;
+          break;
+        }
+      }
       if (!law) return;
       const bookmarked = isBookmarked(id);
       const note = notes[id] || '';
+      const contentFormatted = law.content.replace(/\n/g, '<br>');
       const modalBody = document.getElementById('pasalModalBody');
       modalBody.innerHTML = `
-        <h5 class="text-primary">${law.category} - Pasal ${law.number}</h5>
+        <h5 class="text-primary">${law.category} - ${law.number}</h5>
         <h6>${law.title}</h6>
-        <p class="mt-3">${law.content}</p>
+        <p class="mt-3">${contentFormatted}</p>
         <hr>
         <div class="d-flex gap-3 align-items-center">
           <button class="btn btn-sm ${bookmarked ? 'btn-warning' : 'btn-outline-warning'}" onclick="toggleBookmark('${law.id}'); bootstrap.Modal.getInstance(document.getElementById('pasalModal')).hide();">
@@ -633,72 +691,51 @@
       new bootstrap.Modal(document.getElementById('pasalModal')).show();
     }
 
-    // ----- MENAMPILKAN DETAIL SKRIPSI DI MODAL -----
-    function showSkripsiDetail(id) {
-      let skripsi = null;
-      for (const year in skripsiData) {
-        const found = skripsiData[year].find(s => s.id === id);
-        if (found) {
-          skripsi = found;
-          break;
-        }
-      }
-      if (!skripsi) return;
-      
-      const modalBody = document.getElementById('pasalModalBody');
-      modalBody.innerHTML = `
-        <h5 class="text-primary">${skripsi.title}</h5>
-        <h6 class="text-info">Penulis: ${skripsi.author}</h6>
-        <hr>
-        <div class="mt-3">
-          <p><strong>Abstrak:</strong></p>
-          <p class="text-justify">${skripsi.abstract}</p>
-        </div>
-      `;
-      new bootstrap.Modal(document.getElementById('pasalModal')).show();
-    }
-
-    // ----- DASHBOARD (halaman awal) -----
+    // ----- DASHBOARD -----
     function showDashboard() {
       currentView = 'dashboard';
       const html = `
-        <div class="dashboard-card">
-          <div class="dashboard-icon">
-            <i class="fas fa-gavel"></i>
-          </div>
-          <div class="dashboard-title">Aplikasi dalam Pengembangan</div>
-          <div class="dashboard-text">
-            Portal Hukum untuk Mahasiswa Prodi Hukum sedang disempurnakan.<br>
-            Silakan gunakan menu di samping untuk mengakses KUHP Perdata, Pidana,<br>
-            Materi Kuliah, dan Koleksi Skripsi.
-          </div>
-          <div class="text-muted">
-            <i class="fas fa-bookmark me-1"></i> Bookmark · 
-            <i class="fas fa-pen me-1 ms-2"></i> Catatan · 
-            <i class="fas fa-sync-alt me-1 ms-2"></i> Update Simulasi
+        <div style="position: relative; height: 100%; background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; border-radius: 0.5rem; overflow: hidden;">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6);"></div>
+          <div style="position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; text-align: center; color: white; padding: 2rem;">
+            <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem;">PRODI HUKUM</h1>
+            <marquee style="width: 100%; font-size: 2rem; margin-bottom: 2rem; background: rgba(0,0,0,0.3); padding: 0.5rem;">SELAMAT DATANG DI APLIKASI PRODI HUKUM</marquee>
+            <p style="font-size: 1.2rem; max-width: 600px;">Aplikasi ini menyediakan akses ke KUH Perdata, KUHP Lama, KUHP Baru, KUHAP, materi kuliah, dan koleksi skripsi mahasiswa. Gunakan menu di samping untuk mulai.</p>
+            <div style="margin-top: 2rem;">
+              <button class="btn btn-primary btn-lg me-2" onclick="alert('Fitur login dalam pengembangan')">Login</button>
+              <button class="btn btn-outline-light btn-lg" onclick="alert('Fitur registrasi dalam pengembangan')">Registrasi</button>
+            </div>
           </div>
         </div>
       `;
       document.getElementById('viewContent').innerHTML = html;
     }
 
-    // ----- FUNGSI MENAMPILKAN DAFTAR PASAL -----
-    function renderPasalList(pasalArray, title = 'Daftar Pasal') {
-      let html = `<h5 class="fw-bold mb-3"><i class="fas fa-list me-2 text-primary"></i>${title}</h5>`;
-      if (pasalArray.length === 0) {
-        html += '<p class="text-secondary">Tidak ada pasal.</p>';
+    // ----- FUNGSI UNTUK MENAMPILKAN DAFTAR PASAL PER KATEGORI -----
+    function renderPasalList(category) {
+      const items = pasalData[category] || [];
+      let html = `
+        <h5 class="fw-bold mb-3"><i class="fas fa-list me-2 text-primary"></i>Kategori: ${category}</h5>
+        <button class="btn btn-primary mb-3" onclick="showAddPasalItem('${category}')"><i class="fas fa-plus"></i> Tambah Pasal</button>
+      `;
+      if (items.length === 0) {
+        html += '<p class="text-secondary">Belum ada pasal. Klik "Tambah Pasal" untuk mulai.</p>';
       } else {
         html += '<div class="list-group">';
-        pasalArray.forEach(law => {
+        items.forEach((item) => {
+          // Buat cuplikan pendek
+          const snippet = item.content.replace(/\n/g, ' ').substring(0, 100) + '…';
           html += `
-            <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center law-card" onclick="showPasalDetail('${law.id}')">
-              <div>
-                <span class="badge badge-kuhp">${law.category}</span> <strong>Pasal ${law.number}</strong> - ${law.title}
-                <p class="mb-0 text-secondary small">${law.content.substring(0, 80)}…</p>
+            <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center pasal-card" onclick="showPasalDetail('${item.id}')">
+              <div style="flex:1;">
+                <span class="badge badge-kuhp">${item.number}</span> <strong>${item.title}</strong>
+                <p class="mb-0 text-secondary small">${snippet}</p>
               </div>
               <div>
-                <i class="fas fa-bookmark bookmark-icon ${isBookmarked(law.id) ? 'active' : ''}" onclick="event.stopPropagation(); toggleBookmark('${law.id}')"></i>
-                ${notes[law.id] ? '<i class="fas fa-sticky-note ms-1 text-info" title="Ada catatan"></i>' : ''}
+                <i class="fas fa-bookmark bookmark-icon ${isBookmarked(item.id) ? 'active' : ''}" onclick="event.stopPropagation(); toggleBookmark('${item.id}')"></i>
+                ${notes[item.id] ? '<i class="fas fa-sticky-note ms-1 text-info" title="Ada catatan"></i>' : ''}
+                <button class="btn btn-sm btn-outline-warning ms-2" onclick="event.stopPropagation(); editPasalItem('${category}', '${item.id}')"><i class="fas fa-edit"></i></button>
+                <button class="btn btn-sm btn-outline-danger" onclick="event.stopPropagation(); deletePasalItem('${category}', '${item.id}')"><i class="fas fa-trash"></i></button>
               </div>
             </div>
           `;
@@ -708,88 +745,17 @@
       document.getElementById('viewContent').innerHTML = html;
     }
 
-    // ----- MENAMPILKAN KATEGORI PASAL -----
-    function showCategoryPasal(category) {
-      window.currentCategory = category;
-      const filtered = lawsData.filter(l => l.category === category);
-      renderPasalList(filtered, `Kategori: ${category}`);
-      document.querySelectorAll('#sidebarAccordion .list-group-item').forEach(el => {
-        el.classList.remove('active');
-        if (el.getAttribute('data-category') === category) {
-          el.classList.add('active');
-        }
-      });
-      currentView = 'category';
-    }
-
-    function selectCategory(cat) {
-      showCategoryPasal(cat);
-      document.getElementById('searchInput').value = '';
-    }
-
-    // ----- PENCARIAN -----
-    function searchPasal() {
-      const query = document.getElementById('searchInput').value.toLowerCase().trim();
-      if (!query) {
-        renderPasalList([]);
-        return;
-      }
-      const results = lawsData.filter(law => 
-        law.content.toLowerCase().includes(query) || 
-        law.title.toLowerCase().includes(query) || 
-        law.number.toLowerCase().includes(query) ||
-        law.category.toLowerCase().includes(query)
-      );
-      renderPasalList(results, `Hasil pencarian: "${query}"`);
-      currentView = 'search';
-    }
-
-    // ----- VIEW BOOKMARK & CATATAN -----
-    function renderBookmarksView() {
-      const bookmarkedLaws = lawsData.filter(l => bookmarks.includes(l.id));
-      renderPasalList(bookmarkedLaws, 'Bookmark Saya');
-      currentView = 'bookmarks';
-    }
-    function renderNotesView() {
-      const notedIds = Object.keys(notes);
-      const notedLaws = lawsData.filter(l => notedIds.includes(l.id));
-      let html = '<h5 class="fw-bold mb-3"><i class="fas fa-pen me-2 text-info"></i>Catatan Saya</h5>';
-      if (notedLaws.length === 0) {
-        html += '<p class="text-secondary">Belum ada catatan.</p>';
-      } else {
-        html += '<div class="list-group">';
-        notedLaws.forEach(law => {
-          html += `
-            <div class="list-group-item list-group-item-action" onclick="showPasalDetail('${law.id}')">
-              <div class="d-flex justify-content-between">
-                <span class="badge badge-kuhp">${law.category}</span>
-                <i class="fas fa-bookmark ${isBookmarked(law.id) ? 'text-warning' : 'text-secondary'}" onclick="event.stopPropagation(); toggleBookmark('${law.id}')"></i>
-              </div>
-              <strong>Pasal ${law.number}</strong> - ${law.title}
-              <div class="alert alert-light mt-2 p-2 small" style="background-color:#2a2f38; color:#b0c4de;">📝 ${notes[law.id]}</div>
-            </div>
-          `;
-        });
-        html += '</div>';
-      }
-      document.getElementById('viewContent').innerHTML = html;
-      currentView = 'notes';
-    }
-    function showBookmarksView() { renderBookmarksView(); }
-    function showNotesView() { renderNotesView(); }
-
-    // ----- FUNGSI UNTUK MATA KULIAH (PENYIMPANAN PERMANEN) -----
+    // ----- FUNGSI UNTUK MATA KULIAH (sama seperti sebelumnya) -----
     function showMataKuliah(mkName) {
       currentMK = mkName;
       if (!mkData[mkName]) {
-        mkData[mkName] = []; // inisialisasi array kosong
+        mkData[mkName] = [];
         saveMKData();
       }
       renderMKView(mkName);
       currentView = 'mk';
     }
 
-    // Helper: mengubah teks dengan newline menjadi paragraf
     function formatContent(text) {
       if (!text) return '';
       const lines = text.split('\n');
@@ -828,13 +794,13 @@
       document.getElementById('viewContent').innerHTML = html;
     }
 
-    // Modal handling untuk tambah/edit materi MK
+    // Modal handling untuk MK
     let currentMKForModal = null;
-    let currentEditId = null;
+    let currentMKEditId = null;
 
     function showAddMKItem(mkName) {
       currentMKForModal = mkName;
-      currentEditId = null;
+      currentMKEditId = null;
       document.getElementById('mkTitle').value = '';
       document.getElementById('mkContent').value = '';
       document.getElementById('mkModalLabel').innerText = 'Tambah Materi';
@@ -843,7 +809,7 @@
 
     function editMKItem(mkName, id) {
       currentMKForModal = mkName;
-      currentEditId = id;
+      currentMKEditId = id;
       const item = mkData[mkName].find(i => i.id === id);
       if (item) {
         document.getElementById('mkTitle').value = item.title;
@@ -870,9 +836,9 @@
       }
       if (!currentMKForModal) return;
 
-      if (currentEditId) {
+      if (currentMKEditId) {
         // edit
-        const index = mkData[currentMKForModal].findIndex(i => i.id === currentEditId);
+        const index = mkData[currentMKForModal].findIndex(i => i.id === currentMKEditId);
         if (index !== -1) {
           mkData[currentMKForModal][index].title = title;
           mkData[currentMKForModal][index].content = content;
@@ -883,35 +849,217 @@
         mkData[currentMKForModal].push({ id: newId, title, content });
       }
       saveMKData();
-      // tutup modal
       bootstrap.Modal.getInstance(document.getElementById('mkModal')).hide();
       renderMKView(currentMKForModal);
     }
 
-    // ----- FUNGSI UNTUK SKRIPSI (data dari repository) -----
-    function showSkripsi(year) {
-      currentSkripsiYear = year;
-      renderSkripsiView(year);
-      currentView = 'skripsi';
+    // ----- FUNGSI UNTUK PASAL (manual) -----
+    function showAddPasalItem(category) {
+      document.getElementById('pasalEditId').value = '';
+      document.getElementById('pasalCategory').value = category;
+      document.getElementById('pasalNumber').value = '';
+      document.getElementById('pasalTitle').value = '';
+      document.getElementById('pasalContent').value = '';
+      document.getElementById('pasalModalEditLabel').innerText = 'Tambah Pasal';
+      new bootstrap.Modal(document.getElementById('pasalModalEdit')).show();
     }
 
-    function renderSkripsiView(year) {
-      const items = skripsiData[year] || [];
-      let html = `
-        <h5 class="fw-bold mb-3"><i class="fas fa-file-alt me-2 text-info"></i>Skripsi Mahasiswa ${year}</h5>
-      `;
-      if (items.length === 0) {
-        html += '<p class="text-secondary">Belum ada data skripsi untuk tahun ini.</p>';
+    function editPasalItem(category, id) {
+      const item = pasalData[category].find(i => i.id === id);
+      if (!item) return;
+      document.getElementById('pasalEditId').value = id;
+      document.getElementById('pasalCategory').value = category;
+      document.getElementById('pasalNumber').value = item.number;
+      document.getElementById('pasalTitle').value = item.title;
+      document.getElementById('pasalContent').value = item.content;
+      document.getElementById('pasalModalEditLabel').innerText = 'Edit Pasal';
+      new bootstrap.Modal(document.getElementById('pasalModalEdit')).show();
+    }
+
+    function deletePasalItem(category, id) {
+      if (confirm('Hapus pasal ini?')) {
+        pasalData[category] = pasalData[category].filter(i => i.id !== id);
+        savePasalData();
+        renderPasalList(category);
+      }
+    }
+
+    function savePasalItem() {
+      const category = document.getElementById('pasalCategory').value;
+      const number = document.getElementById('pasalNumber').value.trim();
+      const title = document.getElementById('pasalTitle').value.trim();
+      const content = document.getElementById('pasalContent').value.trim();
+      if (!number || !title || !content) {
+        alert('Nomor, judul, dan konten harus diisi!');
+        return;
+      }
+      const editId = document.getElementById('pasalEditId').value;
+      if (editId) {
+        // edit
+        const index = pasalData[category].findIndex(i => i.id === editId);
+        if (index !== -1) {
+          pasalData[category][index].number = number;
+          pasalData[category][index].title = title;
+          pasalData[category][index].content = content;
+        }
+      } else {
+        // tambah baru
+        const newId = 'pasal-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+        pasalData[category].push({ id: newId, category, number, title, content });
+      }
+      savePasalData();
+      bootstrap.Modal.getInstance(document.getElementById('pasalModalEdit')).hide();
+      renderPasalList(category);
+    }
+
+    function selectCategory(cat) {
+      currentCategory = cat;
+      renderPasalList(cat);
+      document.getElementById('searchInput').value = '';
+      currentView = 'category';
+    }
+
+    // ----- PENCARIAN (di semua pasal) -----
+    function searchPasal() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      if (!query) {
+        // jika query kosong, kembali ke dashboard
+        showDashboard();
+        return;
+      }
+      // Kumpulkan semua pasal dari semua kategori
+      const allPasal = [];
+      for (const cat in pasalData) {
+        allPasal.push(...pasalData[cat]);
+      }
+      const results = allPasal.filter(item => 
+        item.content.toLowerCase().includes(query) || 
+        item.title.toLowerCase().includes(query) || 
+        item.number.toLowerCase().includes(query) ||
+        item.category.toLowerCase().includes(query)
+      );
+      // Tampilkan hasil pencarian
+      let html = `<h5 class="fw-bold mb-3"><i class="fas fa-search me-2 text-primary"></i>Hasil pencarian: "${query}"</h5>`;
+      if (results.length === 0) {
+        html += '<p class="text-secondary">Tidak ditemukan pasal yang cocok.</p>';
       } else {
         html += '<div class="list-group">';
-        items.forEach((item) => {
+        results.forEach(law => {
+          const snippet = law.content.replace(/\n/g, ' ').substring(0, 100) + '…';
           html += `
-            <div class="list-group-item skripsi-card" onclick="showSkripsiDetail('${item.id}')">
+            <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center law-card" onclick="showPasalDetail('${law.id}')">
+              <div>
+                <span class="badge badge-kuhp">${law.category}</span> <strong>${law.number}</strong> - ${law.title}
+                <p class="mb-0 text-secondary small">${snippet}</p>
+              </div>
+              <div>
+                <i class="fas fa-bookmark bookmark-icon ${isBookmarked(law.id) ? 'active' : ''}" onclick="event.stopPropagation(); toggleBookmark('${law.id}')"></i>
+                ${notes[law.id] ? '<i class="fas fa-sticky-note ms-1 text-info" title="Ada catatan"></i>' : ''}
+              </div>
+            </div>
+          `;
+        });
+        html += '</div>';
+      }
+      document.getElementById('viewContent').innerHTML = html;
+      currentView = 'search';
+    }
+
+    // ----- VIEW BOOKMARK & CATATAN (untuk pasal) -----
+    function renderBookmarksView() {
+      // Kumpulkan semua pasal
+      const allPasal = [];
+      for (const cat in pasalData) {
+        allPasal.push(...pasalData[cat]);
+      }
+      const bookmarkedLaws = allPasal.filter(l => bookmarks.includes(l.id));
+      let html = '<h5 class="fw-bold mb-3"><i class="fas fa-bookmark me-2 text-warning"></i>Bookmark Saya</h5>';
+      if (bookmarkedLaws.length === 0) {
+        html += '<p class="text-secondary">Belum ada pasal yang di-bookmark.</p>';
+      } else {
+        html += '<div class="list-group">';
+        bookmarkedLaws.forEach(law => {
+          const snippet = law.content.replace(/\n/g, ' ').substring(0, 100) + '…';
+          html += `
+            <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center law-card" onclick="showPasalDetail('${law.id}')">
+              <div>
+                <span class="badge badge-kuhp">${law.category}</span> <strong>${law.number}</strong> - ${law.title}
+                <p class="mb-0 text-secondary small">${snippet}</p>
+              </div>
+              <div>
+                <i class="fas fa-bookmark bookmark-icon active" onclick="event.stopPropagation(); toggleBookmark('${law.id}')"></i>
+                ${notes[law.id] ? '<i class="fas fa-sticky-note ms-1 text-info" title="Ada catatan"></i>' : ''}
+              </div>
+            </div>
+          `;
+        });
+        html += '</div>';
+      }
+      document.getElementById('viewContent').innerHTML = html;
+      currentView = 'bookmarks';
+    }
+
+    function renderNotesView() {
+      const notedIds = Object.keys(notes);
+      // Kumpulkan semua pasal
+      const allPasal = [];
+      for (const cat in pasalData) {
+        allPasal.push(...pasalData[cat]);
+      }
+      const notedLaws = allPasal.filter(l => notedIds.includes(l.id));
+      let html = '<h5 class="fw-bold mb-3"><i class="fas fa-pen me-2 text-info"></i>Catatan Saya</h5>';
+      if (notedLaws.length === 0) {
+        html += '<p class="text-secondary">Belum ada catatan.</p>';
+      } else {
+        html += '<div class="list-group">';
+        notedLaws.forEach(law => {
+          html += `
+            <div class="list-group-item list-group-item-action" onclick="showPasalDetail('${law.id}')">
+              <div class="d-flex justify-content-between">
+                <span class="badge badge-kuhp">${law.category}</span>
+                <i class="fas fa-bookmark ${isBookmarked(law.id) ? 'text-warning' : 'text-secondary'}" onclick="event.stopPropagation(); toggleBookmark('${law.id}')"></i>
+              </div>
+              <strong>${law.number}</strong> - ${law.title}
+              <div class="alert alert-light mt-2 p-2 small" style="background-color:#2a2f38; color:#b0c4de;">📝 ${notes[law.id]}</div>
+            </div>
+          `;
+        });
+        html += '</div>';
+      }
+      document.getElementById('viewContent').innerHTML = html;
+      currentView = 'notes';
+    }
+
+    function showBookmarksView() { renderBookmarksView(); }
+    function showNotesView() { renderNotesView(); }
+
+    // ----- FUNGSI UNTUK SKRIPSI -----
+    function showSkripsiList() {
+      currentView = 'skripsiList';
+      renderSkripsiList();
+    }
+
+    function renderSkripsiList() {
+      let html = `
+        <h5 class="fw-bold mb-3"><i class="fas fa-file-alt me-2 text-info"></i>Daftar Skripsi</h5>
+        <button class="btn btn-primary mb-3" onclick="showAddSkripsi()"><i class="fas fa-plus"></i> Tulis Skripsi Baru</button>
+      `;
+      if (skripsiData.length === 0) {
+        html += '<p class="text-secondary">Belum ada skripsi. Klik "Tulis Skripsi Baru" untuk mulai.</p>';
+      } else {
+        html += '<div class="list-group">';
+        skripsiData.forEach((item) => {
+          html += `
+            <div class="list-group-item list-group-item-action skripsi-card" onclick="showSkripsiDetail('${item.id}')">
               <div class="d-flex justify-content-between align-items-start">
                 <div style="flex:1;">
-                  <h6 class="fw-bold">${item.title}</h6>
-                  <div class="skripsi-meta">Penulis: ${item.author}</div>
-                  <div class="skripsi-content small">${item.abstract.substring(0, 150)}…</div>
+                  <h6 class="fw-bold">${item.judul}</h6>
+                  <div class="skripsi-meta">Penulis: ${item.penulis}</div>
+                  <div class="skripsi-content small">${item.abstrak.substring(0, 150)}…</div>
+                </div>
+                <div class="skripsi-actions">
+                  <button class="btn btn-sm btn-outline-warning" onclick="event.stopPropagation(); editSkripsi('${item.id}')"><i class="fas fa-edit"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" onclick="event.stopPropagation(); deleteSkripsi('${item.id}')"><i class="fas fa-trash"></i></button>
                 </div>
               </div>
             </div>
@@ -922,26 +1070,107 @@
       document.getElementById('viewContent').innerHTML = html;
     }
 
-    // refresh tampilan saat ini (misal setelah toggle bookmark)
+    function showAddSkripsi() {
+      document.getElementById('skripsiEditId').value = '';
+      document.getElementById('skripsiJudul').value = '';
+      document.getElementById('skripsiPenulis').value = '';
+      document.getElementById('skripsiAbstrak').value = '';
+      document.getElementById('skripsiIsi').value = '';
+      document.getElementById('skripsiModalLabel').innerText = 'Tulis Skripsi Baru';
+      new bootstrap.Modal(document.getElementById('skripsiModal')).show();
+    }
+
+    function editSkripsi(id) {
+      const item = skripsiData.find(s => s.id === id);
+      if (!item) return;
+      document.getElementById('skripsiEditId').value = id;
+      document.getElementById('skripsiJudul').value = item.judul;
+      document.getElementById('skripsiPenulis').value = item.penulis;
+      document.getElementById('skripsiAbstrak').value = item.abstrak;
+      document.getElementById('skripsiIsi').value = item.isi;
+      document.getElementById('skripsiModalLabel').innerText = 'Edit Skripsi';
+      new bootstrap.Modal(document.getElementById('skripsiModal')).show();
+    }
+
+    function deleteSkripsi(id) {
+      if (confirm('Hapus skripsi ini?')) {
+        skripsiData = skripsiData.filter(s => s.id !== id);
+        saveSkripsiData();
+        renderSkripsiList();
+      }
+    }
+
+    function saveSkripsiItem() {
+      const judul = document.getElementById('skripsiJudul').value.trim();
+      const penulis = document.getElementById('skripsiPenulis').value.trim();
+      const abstrak = document.getElementById('skripsiAbstrak').value.trim();
+      const isi = document.getElementById('skripsiIsi').value.trim();
+      if (!judul || !penulis || !abstrak || !isi) {
+        alert('Semua field harus diisi!');
+        return;
+      }
+      const editId = document.getElementById('skripsiEditId').value;
+      if (editId) {
+        // edit
+        const index = skripsiData.findIndex(s => s.id === editId);
+        if (index !== -1) {
+          skripsiData[index].judul = judul;
+          skripsiData[index].penulis = penulis;
+          skripsiData[index].abstrak = abstrak;
+          skripsiData[index].isi = isi;
+        }
+      } else {
+        // tambah baru
+        const newId = 'skripsi-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+        skripsiData.push({ id: newId, judul, penulis, abstrak, isi });
+      }
+      saveSkripsiData();
+      bootstrap.Modal.getInstance(document.getElementById('skripsiModal')).hide();
+      renderSkripsiList();
+    }
+
+    function showSkripsiDetail(id) {
+      const item = skripsiData.find(s => s.id === id);
+      if (!item) return;
+      // Format isi dengan paragraf
+      const isiFormatted = item.isi.split('\n').filter(p => p.trim() !== '').map(p => `<p>${p}</p>`).join('');
+      const modalBody = document.getElementById('pasalModalBody');
+      modalBody.innerHTML = `
+        <div class="skripsi-dokumen" style="background: white; color: black; padding: 2cm; margin: 0; font-family: 'Times New Roman', serif; font-size: 12pt; line-height: 1.5; text-align: justify;">
+          <h4 class="judul" style="text-align: center; font-size: 14pt; font-weight: bold;">${item.judul}</h4>
+          <p class="penulis" style="text-align: center;">${item.penulis}</p>
+          <div class="abstrak">
+            <h6 style="font-weight: bold;">Abstrak</h6>
+            <p>${item.abstrak}</p>
+          </div>
+          <div class="konten">
+            ${isiFormatted}
+          </div>
+        </div>
+      `;
+      new bootstrap.Modal(document.getElementById('pasalModal')).show();
+    }
+
+    // ----- REFRESH TAMPILAN SAAT INI -----
     function refreshCurrentView() {
       if (currentView === 'dashboard') showDashboard();
       else if (currentView === 'bookmarks') renderBookmarksView();
       else if (currentView === 'notes') renderNotesView();
-      else if (currentView === 'category' && window.currentCategory) {
-        showCategoryPasal(window.currentCategory);
+      else if (currentView === 'category' && currentCategory) {
+        renderPasalList(currentCategory);
       } else if (currentView === 'search') {
         const query = document.getElementById('searchInput').value.trim();
         if (query) searchPasal(); else showDashboard();
       } else if (currentView === 'mk' && currentMK) {
         renderMKView(currentMK);
-      } else if (currentView === 'skripsi' && currentSkripsiYear) {
-        renderSkripsiView(currentSkripsiYear);
+      } else if (currentView === 'skripsiList') {
+        renderSkripsiList();
       } else {
         showDashboard();
       }
     }
 
-    // Inisialisasi awal: tampilkan dashboard
+    // Inisialisasi awal
     window.onload = function() {
       showDashboard();
     };
@@ -949,7 +1178,7 @@
 
   <!-- footer small -->
   <footer class="text-center footer-note mt-3">
-    <span>Terintegrasi dengan sumber hukum Indonesia (simulasi update otomatis). Data KUHP Perdata, Pidana Lama & Baru.</span>
+    <span>Terintegrasi dengan sumber hukum Indonesia (simulasi update otomatis). Data ditulis manual oleh pengguna.</span>
   </footer>
 </body>
 </html>
